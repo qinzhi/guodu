@@ -19,9 +19,9 @@ return array(
     //'URL_CASE_INSENSITIVE'  =>  true,   //URL大小写
     'APP_SUB_DOMAIN_DEPLOY'   =>    1,   // 开启子域名配置
     'APP_SUB_DOMAIN_RULES'    =>    array(
-        'admin.guolai.com'  => 'Admin',      // admin.soa.com域名指向Admin模块
-        'www.guolai.com'  => 'Home',      // www.domain1.com域名指向Home模块
-        'm.guolai.com'  => 'Weixin',      // www.domain1.com域名指向Home模块
+        'admin.guodu.com'  => 'Admin',      // admin.soa.com域名指向Admin模块
+        'www.guodu.com'  => 'Home',      // www.domain1.com域名指向Home模块
+        'm.guodu.com'  => 'Weixin',      // www.domain1.com域名指向Home模块
     ),
 
     /*'VAR_PAGE'	=>'p',
