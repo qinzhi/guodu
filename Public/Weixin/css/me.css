@@ -1,0 +1,89 @@
+.me-box{
+    background-image: url('../images/me-background.jpg');
+    background-size: 100% 100%;
+    width: 100%;
+}
+.me-box .me-avatar{
+    text-align: center;
+    padding: 1rem 0;
+}
+.me-box .me-avatar .img-border{
+    height: 7rem;
+    width: 7rem;
+    margin: 0 auto;
+}
+.me-box .me-avatar .img-border img{
+    width: 100%;
+    border: .2rem solid #41c172;
+    border-radius: 50%;
+}
+.me-box .me-name{
+    margin-top: .5rem;
+    line-height: 2rem;
+}
+.me-asset > div{
+    text-align: center;
+    background: rgba(0,0,0,0.1);
+    padding: .5rem 0;
+}
+.me-asset .me-coupon{
+    border-right: 1px solid #fff;
+}
+.me-asset a{
+    color: #fff;
+}
+.me-center{
+    margin-top: 1.6rem;
+}
+.me-center .center_inner{
+    height: 4.5rem;
+    line-height: 4.5rem;
+    background-color: #fff;
+    border-bottom: 2px solid #f9f9f9;
+}
+.me-center .center_inner a{
+    padding: 0 2rem;
+}
+.me-center .center_inner.first,.me-center .center_inner.last{
+    border-bottom: none;
+}
+.center_inner .inner-name{
+    color: #333333;
+}
+.center_inner .inner-icon{
+    color: #b2b2b2;
+}
+.center_inner .order-tip{
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+.me-center .list-box{
+    text-align: center;
+    width: 100%;
+}
+.me-center .list-box .order-status{
+    position: relative;
+    padding: .5rem 0;
+}
+.me-center .list-box .order-status .order-count{
+    margin-right: -2.5rem;
+    opacity: 0.9;
+    position: absolute;
+    right: 50%;
+    top: .5rem;
+}
+.me-center .list-box .order-status a{
+    color: #9c9c9c;
+    display: block;
+}
+.me-center .list-box .order-status .icon{
+    font-size: 3.5rem;
+}
+.me-center .list-box .order-status p{
+    font-size: 1.2rem;
+    margin-top: -.5rem;
+}
+.me-center .me-logout{
+    margin: 1rem 0;
+    padding: 0 5rem;
+}

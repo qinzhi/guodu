@@ -1,0 +1,21 @@
+.empty-cart-warp{
+    width: 100%;
+}
+.empty-cart{
+    margin: 0 auto;
+    padding-top: 25%;
+    text-align: center;
+}
+.empty-cart .icon-cart{
+    font-size: 10rem;
+    color: #333;
+}
+.empty-cart .cart-tip{
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    margin: 1.5rem 0;
+    color: #333;
+}
+.empty-cart .btn-empty-cart{
+    width: 15rem;
+}
