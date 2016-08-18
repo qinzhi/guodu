@@ -2,8 +2,8 @@
 
 return array(
     "LOAD_EXT_FILE"=>"fb",
-    'LOAD_EXT_CONFIG' => 'db,session,tags',
-    'MODULE_ALLOW_LIST' => array('Home', 'Admin'),
+    'LOAD_EXT_CONFIG' => 'db,weixin,session,tags',
+    'MODULE_ALLOW_LIST' => array('Home', 'Admin','Weixin'),
     'DEFAULT_MODULE' => 'Home',
 
     /* URL配置 */
@@ -19,9 +19,12 @@ return array(
     //'URL_CASE_INSENSITIVE'  =>  true,   //URL大小写
     'APP_SUB_DOMAIN_DEPLOY'   =>    1,   // 开启子域名配置
     'APP_SUB_DOMAIN_RULES'    =>    array(
+        'admin.taoth.cn'  => 'Admin',      // admin.soa.com域名指向Admin模块
         'admin.guodu.com'  => 'Admin',      // admin.soa.com域名指向Admin模块
-        'www.guodu.com'  => 'Home',      // www.domain1.com域名指向Home模块
-        'm.guodu.com'  => 'Weixin',      // www.domain1.com域名指向Home模块
+        //'www.guodu.com'  => 'Home',      // www.domain1.com域名指向Home模块
+        'm.taoth.cn'  => 'Weixin',      // www.domain1.com域名指向Home模块
+        'm.guodu.com' => 'Weixin',
+        'm.guoduqianxun.com' => 'Weixin',
     ),
 
     /*'VAR_PAGE'	=>'p',
@@ -39,6 +42,14 @@ return array(
     'DB_LIKE_FIELDS'            =>'content|remark',*/
 
     //'SHOW_PAGE_TRACE'=>0, //显示调试信息
+
+    /* 公共模板相关配置 */
+    'TMPL_PARSE_STRING' => array(
+        '__STATIC__' => __ROOT__ . '/Public/Static',
+        '__STATIC_JS__' => __ROOT__ . '/Public/Static/js',
+        '__STATIC_CSS__' => __ROOT__ . '/Public/Static/css',
+        '__LIGHT7__' => __ROOT__ . '/Public/Static/plugins/light7',
+    ),
 
     /* 系统数据加密设置 */
     'DATA_AUTH_KEY' => '1*NX+Jds|p!IFqltgD)"?4;ic<{,wuya239Ax^]-', //默认数据加密KEY

@@ -434,37 +434,12 @@ article,aside,details,dialog,figcaption,figure,footer,header,hgroup,nav,section,
     /*IE4-IE9*/
     filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
 }
-.loading{
-    height: 100%;
-    left: 0;
-    max-width: 640px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 100;
-}
-.loading .shade{
-    background-color: rgba(255,255,255,0);
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 101;
-}
-.loading .loading-area{
-    background: #6d7276 none repeat scroll 0 0;
-    border-radius: .6rem;
-    color: #fff;
-    margin-left: 26%;
-    opacity: 0.9;
-    padding: 1rem 0;
-    position: fixed;
-    top: 40%;
-    width: 48%;
-    z-index: 102;
-    text-align: center;
-}
-.loading .loading-img{
-    opacity: 0.2;
-}
+
+.page{background-color: #f0f4f0;}
+.bar-nav a{color: #ffffff;}
+.bar-nav .title{background-color: #41c172;color: #ffffff;}
+.bar-tab .tab-item.active, .bar-tab .tab-item:active{color: #41c172;}
+
+.swiper-home{padding-bottom: 0;background-color: #fff;}
+.swiper-home .swiper-img{width: 100%;float: left}
+.swiper-home .swiper-pagination{bottom: 0rem;}

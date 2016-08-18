@@ -7,6 +7,8 @@
  */
 namespace Weixin\Model;
 
+use Weixin\Model\CartModel;
+
 class GoodsModel extends CommonModel{
 
     const TABLE = 'goods_category';
@@ -36,7 +38,11 @@ class GoodsModel extends CommonModel{
             'g.' . self::FIELD_STATUS => self:: STATUS_OPEN,
             'g.' . self::FIELD_IS_DEL => self::DEL_NO
         );
-        $goods = $this->field('g.*,p.num as rule_num,p.price as rule_price')->alias('g')
+
+        $cartSql = $this->table($this->tablePrefix . 'cart')->where(array(CartModel::FIELD_USER_ID=>$this->user_id))->buildSql();
+
+        $goods = $this->alias('g')->field('g.*,p.num as rule_num,p.price as rule_price,c.cart_num')
+                        ->join('left join (' . $cartSql . ') as c on g.id=c.goods_id')
                         ->join('left join ' . $this->tablePrefix . 'goods_to_price as p on g.id=p.goods_id')
                         ->where($where)->select();
         $arr = array();

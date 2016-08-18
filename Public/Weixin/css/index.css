@@ -1,11 +1,3 @@
-.swiper-container .swiper-slide{
-    background-color: #ffffff;
-}
-.swiper-container .swiper-slide img{
-    max-width: 100%;
-    float: left;
-}
-
 /*************************首页产品列表****************************/
 .product-area{
     background-color: #ffffff;
@@ -13,34 +5,36 @@
 }
 .product-area .product-title{
     border-bottom: .1rem solid #e7e7e7;
-    line-height: 4.5rem;
+    line-height: 2.25rem;
 }
-.product-area .product-title h3{
-    margin-left: 1rem;
-    font-size: 1.4rem;
+.product-area .product-title h4{
     color: #41c172;
+    margin-left: .5rem;
 }
 .product-area .product-title .icon{
-    margin-right: 1rem;
+    margin-right: .5rem;
     color: #9e9e9e;
 }
 .product-content{
     width: 100%;
+}
+.product-content p{
+    margin: 0;
 }
 .product-content .product-list-item{
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    border-bottom: .1rem solid #e7e7e7;
+    border-bottom: .05rem solid #e7e7e7;
     width: 100%;
 }
 .product-content .product-list-item:last-child{
     border-bottom: none;
 }
 .product-content .product-img{
-    width: 12rem;
-    height: 12rem;
+    width: 6rem;
+    height: 6rem;
 }
 .product-content .product-img img{
     width: 100%;
@@ -51,12 +45,12 @@
     -ms-flex: 1;
     flex: 1;
     text-align: right;
-    padding-right: .5rem;
+    padding-right: .25rem;
 	width: 100%;
 }
 .product-content .product-info h3{
-    font-size: 1.6rem;
-    line-height: 3.5rem;
+    line-height: 1.75rem;
+    font-size: .7rem;
     color: #333333;
     text-overflow:ellipsis;
     white-space:nowrap;
@@ -64,46 +58,58 @@
 }
 .product-content .product-info .product_intro{
     color: #666666;
-    font-size: 1.2rem;
-}
-.product-content .product-info .product-cost{
-    float: right;
+    font-size: 0.6rem;
 }
 .product-content .product-info .product-cost > div{
-    line-height: 2.5rem;
+    line-height: 1.25rem;
 }
 .product-content .product-info .product-sell_num{
     color: #666666;
-    font-size: 1.2rem;
-    margin-top: .1rem;
+    font-size: 0.6rem;
+    margin-top: .05rem;
 }
 .product-content .product-info .product_price{
     color: #ff655b;
+    margin-right: 1rem;
 }
 .product-content .product-info .product_price sup{
-    font-size: 1.2rem;
-    margin-right: -0.5rem;
-    line-height: 1.8rem;
+    font-size: 0.6rem;
+    margin-right: -0.25rem;
+    line-height: 0.9rem;
 }
 .product-content .product-info .product_price em{
-    font-size: 1.8rem;
+    font-size: 0.9rem;
 }
 .product-content .product-info .product_price i{
     font-style: normal;
-    margin: 0 -0.3rem;
+    margin: 0 -0.15rem;
 }
 .product-content .product-info .product-cart_add .icon{
-    font-size: 3.5rem;
+    font-size: 1.75rem;
     color: #41c172;
     font-weight: 100;
 }
 .product-content .product-info .product-cart_add{
     cursor: pointer;
+    line-height: 1.6rem;
+    overflow: hidden;
+    padding-top: .1rem;
+}
+.product-content .product-info .product-cart_add > *{
+    float: right;
+}
+.product-content .product-info .product-cart_add .cart_num{
+    border: none;
+    width: 1.8rem;
+    height: 1.6rem;
+    text-align: center;
+    background-color: #ffffff;
+    padding: .2rem;
 }
 /******************************************************/
 
-.product-purchasing{
-    
+.product-purchasing p{
+    margin: 0;
 }
 .all-shade{
     position: fixed;
@@ -119,13 +125,13 @@
 }
 .fade_toggle{
 	display: block;
-	background: rgba(0, 0, 0, 0.6);
+	background: rgba(0, 0, 0, 0.3);
 }
 .product-panel{
     position: fixed;
     background-color: #f0f4f0;
     overflow: hidden;
-    z-index: 100;
+    z-index: 9999;
     left: 0;
     bottom: 0;
     height: 80%;
@@ -152,8 +158,8 @@
 	display:flex;
 }
 .product-panel .product-img{
-    width: 12rem;
-    height: 12rem;
+    width: 6rem;
+    height: 6rem;
 }
 .product-panel .product-img img{
     width: 100%;
@@ -163,11 +169,11 @@
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    padding: 1rem;
+    padding: .5rem;
 }
 .product-panel .product-info .product_name{
-    font-size: 1.6rem;
-    line-height: 5rem;
+    font-size: 0.7rem;
+    line-height: 2.2rem;
     text-overflow:ellipsis;
     white-space:nowrap;
     overflow:hidden;
@@ -176,24 +182,24 @@
     color: #ff655b;
 }
 .product-panel .product-info .product_price sup{
-    font-size: 1.2rem;
-    margin-right: -.1rem;
-    line-height: 2rem;
+    font-size: 0.6rem;
+    margin-right: -.05rem;
+    line-height: 1rem;
 }
 .product-panel .product-info .product_price em{
-    font-size: 2rem;
+    font-size: 1rem;
 }
 .product-panel .product-info .product_price i{
     font-style: normal;
 }
 .product-panel .product-info .product-purchase_num{
     color: #666666;
-    padding-left: 1rem;
+    padding-left: .5rem;
 }
 .product-panel .panel-close{
     position: absolute;
-    right: 1.2rem;
-    top: 1.2rem;
+    right: .3rem;
+    top: .3rem;
     color: #9c9c9c;
     cursor: default;
 }
@@ -203,46 +209,47 @@
     width: 100%;
 }
 .product-panel .product-action .product-ok{
-    padding: 1.2rem;
+    padding: .5rem;
 }
 .product-panel .product-order{
-    padding: 1rem;
+    padding: .5rem;
 }
 .product-panel .product-order .order-header{
-    margin-top: 1rem;
+    margin-top: .5rem;
 }
 .product-panel .product-order .order-header .order-title{
-    font-size: 1.8rem;
+    font-size: .9rem;
 }
 .product-panel .product-order .order-header .order-stock{
-    font-size: 1.2rem;
+    font-size: .6rem;
     color: #666666;
 }
 .product-panel .product-order .order-action{
-    padding: 1.5rem 0;
+    padding: .75rem 0;
 }
 .product-panel .order-action .amount-down,.product-panel .order-action .amount-up{
     border: 1px solid #d9d9d9;
     display: inline-block;
-    width: 3.5rem;
-    height: 3.5rem;
-    line-height: 3.5rem;
+    width: 1.75rem;
+    height: 1.75rem;
+    line-height: 1.75rem;
     text-align: center;
+    color: #41c172;
 }
 .product-panel .order-action .amount-down{
-    border-top-left-radius: .4rem;
-    border-bottom-left-radius: .4rem;
+    border-top-left-radius: .2rem;
+    border-bottom-left-radius: .2rem;
 }
 .product-panel .order-action .amount-up{
-    border-top-right-radius: .4rem;
-    border-bottom-right-radius: .4rem;
+    border-top-right-radius: .2rem;
+    border-bottom-right-radius: .2rem;
 }
 .product-panel .order-action .amount-input{
-    height: 3.5rem;
-    border-top: 1px solid #d9d9d9;
-    border-bottom: 1px solid #d9d9d9;
+    height: 1.75rem;
+    border-top: .05rem solid #d9d9d9;
+    border-bottom: .05rem solid #d9d9d9;
     border-left: none;
     border-right: none;
     text-align: center;
-    width: 8rem;
+    width: 4rem;
 }

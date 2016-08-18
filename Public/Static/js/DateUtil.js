@@ -1,136 +1,136 @@
-function DateUtil() {  
-    this.WeekDay;// ĞÇÆÚ¼¸  
+ï»¿function DateUtil() {  
+    this.WeekDay;// æ˜ŸæœŸå‡   
     this.WeekDayStr;  
-    this.Day;// µ±Ìì  
-    this.Year;// µ±Äê  
-    this.Month;// µ±ÔÂ  
-    this.Hours;// µ±Ç°Ğ¡Ê±  
+    this.Day;// å½“å¤©  
+    this.Year;// å½“å¹´  
+    this.Month;// å½“æœˆ  
+    this.Hours;// å½“å‰å°æ—¶  
     this.Minutes;  
     this.Seconds;  
-    this.Time;// µ±Ç°ÊÂ¼ş  
+    this.Time;// å½“å‰äº‹ä»¶  
     var Nowdate = new Date();  
     this.WeekDay = Nowdate.getDay();  
     this.Month = Nowdate.getMonth();  
     this.Day = Nowdate.getDate();  
     this.Year = Nowdate.getFullYear();  
-    this.WeekDayStr = 'ĞÇÆÚ' + 'ÈÕÒ»¶şÈıËÄÎåÁù'.charAt(this.WeekDay)  
+    this.WeekDayStr = 'æ˜ŸæœŸ' + 'æ—¥ä¸€äºŒä¸‰å››äº”å…­'.charAt(this.WeekDay)  
     this.Hours = Nowdate.getHours();  
     this.Minutes = Nowdate.getMinutes();  
     this.Seconds = Nowdate.getSeconds();  
     this.Time = this.Year + "-" + (this.Month + 1) + "-" + this.Day + " "  
             + this.Hours + ":" + this.Minutes + ":" + this.Seconds;  
   
-    // ½ñÌì  
+    // ä»Šå¤©  
     this.showCurrentDay = function() {  
         return Nowdate;  
     };  
-    // ±¾ÖÜµÚÒ»Ìì  
+    // æœ¬å‘¨ç¬¬ä¸€å¤©  
     this.showWeekFirstDay = function() {  
         var WeekFirstDay = new Date(Nowdate - (this.WeekDay - 1) * 86400000);  
         return WeekFirstDay;  
     };  
-    // ±¾ÖÜ×îºóÒ»Ìì  
+    // æœ¬å‘¨æœ€åä¸€å¤©  
     this.showWeekLastDay = function() {  
         var WeekFirstDay = this.showWeekFirstDay();  
         var WeekLastDay = new Date((WeekFirstDay / 1000 + 6 * 86400) * 1000);  
         return WeekLastDay;  
     };  
-    // ±¾ÔÂµÚÒ»Ìì  
+    // æœ¬æœˆç¬¬ä¸€å¤©  
     this.showMonthFirstDay = function() {  
         var MonthFirstDay = new Date(this.Year, this.Month, 1);  
         return MonthFirstDay;  
     };  
-    // ±¾ÔÂ×îºóÒ»Ìì  
+    // æœ¬æœˆæœ€åä¸€å¤©  
     this.showMonthLastDay = function() {  
         var MonthNextFirstDay = new Date(this.Year, this.Month + 1, 1);  
         var MonthLastDay = new Date(MonthNextFirstDay - 86400000);  
         return MonthLastDay;  
     };  
   
-    // µ±ÄêµÚÒ»Ìì  
+    // å½“å¹´ç¬¬ä¸€å¤©  
     this.showYearFirstDay = function() {  
         var YearFirstDay = new Date(this.Year, 0, 1);  
         return YearFirstDay;  
     };  
-    // µ±Äê×îºóÒ»Ìì  
+    // å½“å¹´æœ€åä¸€å¤©  
     this.showYearLastDay = function() {  
         var YearNextFirstDay = new Date(this.Year + 1, 0, 1);  
         var YearLastDay = new Date(YearNextFirstDay - 86400000);  
         return YearLastDay;  
     };  
   
-    // ÉÏÄêµÚÒ»Ìì  
+    // ä¸Šå¹´ç¬¬ä¸€å¤©  
     this.showYearPreviousFirstDay = function() {  
         var YearPreviousFirstDay = new Date(this.Year - 1, 0, 1);  
         return YearPreviousFirstDay;  
     };  
-    // ÉÏÄê×îºóÒ»Ìì  
+    // ä¸Šå¹´æœ€åä¸€å¤©  
     this.showYearPreviousLastDay = function() {  
         var YearFirstDay = this.showYearFirstDay();  
         var YearPreviousLastDay = new Date(YearFirstDay - 86400000);  
         return YearPreviousLastDay;  
     };  
   
-    // ÏÂÄêµÚÒ»Ìì  
+    // ä¸‹å¹´ç¬¬ä¸€å¤©  
     this.showYearNextFirstDay = function() {  
         var YearNextFirstDay = new Date(this.Year + 1, 0, 1);  
         return YearNextFirstDay;  
     };  
-    // ÏÂÄê×îºóÒ»Ìì  
+    // ä¸‹å¹´æœ€åä¸€å¤©  
     this.showYearNextLastDay = function() {  
         var step = new Date(this.Year + 2, 0, 1);  
         var YearNextLastDay = new Date(step - 86400000);  
         return YearNextLastDay;  
     };  
   
-    // ÉÏÔÂµÚÒ»Ìì  
+    // ä¸Šæœˆç¬¬ä¸€å¤©  
     this.showPreviousFirstDay = function() {  
         var MonthFirstDay = this.showMonthFirstDay()  
         return new Date(MonthFirstDay.getFullYear(), MonthFirstDay.getMonth()  
                         - 1, 1)  
     };  
-    // ÉÏÔÂ×îºóÒ»Ìì  
+    // ä¸Šæœˆæœ€åä¸€å¤©  
     this.showPreviousLastDay = function() {  
         var MonthFirstDay = this.showMonthFirstDay();  
         return new Date(MonthFirstDay - 86400000);  
     };  
-    // ÉÏÖÜµÚÒ»Ìì  
+    // ä¸Šå‘¨ç¬¬ä¸€å¤©  
     this.showPreviousFirstWeekDay = function() {  
         var WeekFirstDay = this.showWeekFirstDay()  
         return new Date(WeekFirstDay - 86400000 * 7)  
     };  
-    // ÉÏÖÜ×îºóÒ»Ìì  
+    // ä¸Šå‘¨æœ€åä¸€å¤©  
     this.showPreviousLastWeekDay = function() {  
         var WeekFirstDay = this.showWeekFirstDay()  
         return new Date(WeekFirstDay - 86400000)  
     };  
-    // ÉÏÒ»Ìì  
+    // ä¸Šä¸€å¤©  
     this.showPreviousDay = function() {  
         var MonthFirstDay = new Date();  
         return new Date(MonthFirstDay - 86400000);  
     };  
-    // ÏÂÒ»Ìì  
+    // ä¸‹ä¸€å¤©  
     this.showNextDay = function() {  
         var MonthFirstDay = new Date();  
         return new Date((MonthFirstDay / 1000 + 86400) * 1000);  
     };  
-    // ÏÂÖÜµÚÒ»Ìì  
+    // ä¸‹å‘¨ç¬¬ä¸€å¤©  
     this.showNextFirstWeekDay = function() {  
         var MonthFirstDay = this.showWeekLastDay()  
         return new Date((MonthFirstDay / 1000 + 86400) * 1000)  
     };  
-    // ÏÂÖÜ×îºóÒ»Ìì  
+    // ä¸‹å‘¨æœ€åä¸€å¤©  
     this.showNextLastWeekDay = function() {  
         var MonthFirstDay = this.showWeekLastDay()  
         return new Date((MonthFirstDay / 1000 + 7 * 86400) * 1000)  
     };  
-    // ÏÂÔÂµÚÒ»Ìì  
+    // ä¸‹æœˆç¬¬ä¸€å¤©  
     this.showNextFirstDay = function() {  
         var MonthFirstDay = this.showMonthFirstDay()  
         return new Date(MonthFirstDay.getFullYear(), MonthFirstDay.getMonth()  
                         + 1, 1)  
     };  
-    // ÏÂÔÂ×îºóÒ»Ìì  
+    // ä¸‹æœˆæœ€åä¸€å¤©  
     this.showNextLastDay = function() {  
         var MonthFirstDay = this.showMonthFirstDay()  
         return new Date(new Date(MonthFirstDay.getFullYear(), MonthFirstDay  
@@ -139,7 +139,7 @@ function DateUtil() {
                 - 86400000)  
     };  
   
-    // ·µ»Øjson  
+    // è¿”å›json  
     this.toObject = function(startTime, endTime) {  
         var obj = {  
             start : startTime.getFullYear() + "-" + (startTime.getMonth() + 1)  
@@ -150,56 +150,56 @@ function DateUtil() {
         return obj;  
     }  
 };  
-// ÉÏÒ»Äê {start:2010-01-01 00:00:00,end:2010-12-31 23:59:59}  
+// ä¸Šä¸€å¹´ {start:2010-01-01 00:00:00,end:2010-12-31 23:59:59}  
 DateUtil.prototype.PreviousYear = function() {  
     return this.toObject(this.showYearPreviousFirstDay(), this  
                     .showYearPreviousLastDay());  
 };  
-// ±¾Äê {start:2011-01-01 00:00:00,end:2011-12-31 23:59:59}  
+// æœ¬å¹´ {start:2011-01-01 00:00:00,end:2011-12-31 23:59:59}  
 DateUtil.prototype.CurrentYear = function() {  
     return this.toObject(this.showYearFirstDay(), this.showYearLastDay());  
 };  
-// ÏÂÒ»Äê {start:2012-01-01 00:00:00,end:2012-12-31 23:59:59}  
+// ä¸‹ä¸€å¹´ {start:2012-01-01 00:00:00,end:2012-12-31 23:59:59}  
 DateUtil.prototype.NextYear = function() {  
     return this.toObject(this.showYearNextFirstDay(), this  
                     .showYearNextLastDay());  
 };  
-// ÉÏÒ»ÔÂ {start:2011-01-01 00:00:00,end:2011-01-31 23:59:59}  
+// ä¸Šä¸€æœˆ {start:2011-01-01 00:00:00,end:2011-01-31 23:59:59}  
 DateUtil.prototype.PreviousMonth = function() {  
     return this.toObject(this.showPreviousFirstDay(), this  
                     .showPreviousLastDay());  
 };  
-// ±¾ÔÂ {start:2011-02-01 00:00:00,end:2011-02-28 23:59:59}  
+// æœ¬æœˆ {start:2011-02-01 00:00:00,end:2011-02-28 23:59:59}  
 DateUtil.prototype.CurrentMonth = function() {  
     return this.toObject(this.showMonthFirstDay(), this.showMonthLastDay());  
 };  
-// ÏÂÒ»ÔÂ {start:2011-03-01 00:00:00,end:2011-03-31 23:59:59}  
+// ä¸‹ä¸€æœˆ {start:2011-03-01 00:00:00,end:2011-03-31 23:59:59}  
 DateUtil.prototype.NextMonth = function() {  
     return this.toObject(this.showNextFirstDay(), this.showNextLastDay());  
 };  
-// ÉÏÒ»ÖÜ  
+// ä¸Šä¸€å‘¨  
 DateUtil.prototype.PreviousWeekDay = function() {  
     return this.toObject(this.showPreviousFirstWeekDay(), this  
                     .showPreviousLastWeekDay());  
 };  
-// ±¾ÖÜ  
+// æœ¬å‘¨  
 DateUtil.prototype.CurrentWeekDay = function() {  
     return this.toObject(this.showWeekFirstDay(), this.showWeekLastDay());  
 };  
-// ÏÂÒ»ÖÜ  
+// ä¸‹ä¸€å‘¨  
 DateUtil.prototype.NextWeekDay = function() {  
     return this.toObject(this.showNextFirstWeekDay(), this  
                     .showNextLastWeekDay());  
 };  
-// ÉÏÒ»Ìì  
+// ä¸Šä¸€å¤©  
 DateUtil.prototype.PreviousDay = function() {  
     return this.toObject(this.showPreviousDay(), this.showPreviousDay());  
 };  
-// ½ñÌì  
+// ä»Šå¤©  
 DateUtil.prototype.CurrentDay = function() {  
     return this.toObject(this.showCurrentDay(), this.showCurrentDay());  
 };  
-// ÏÂÒ»Ìì  
+// ä¸‹ä¸€å¤©  
 DateUtil.prototype.NextDay = function() {  
     return this.toObject(this.showNextDay(), this.showNextDay());  
 };
